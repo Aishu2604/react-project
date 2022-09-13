@@ -27,26 +27,17 @@ const App = () => {
   return (
     <Card>
       <h2>Hello! Mr. Aishwary</h2>
-      <ExpenseItem
-      title={expenses[0].title}
-      amount={expenses[0].amount}
-      date={expenses[0].date}
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[1].title}
-      amount={expenses[1].amount}
-      date={expenses[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[2].title}
-      amount={expenses[2].amount}
-      date={expenses[2].date}
+      <div>{expenses.map((obj) => {
+        return <ExpenseItem title={obj.title} amount={obj.amount} date={obj.date} />
+      })}
+      </div>
+      {/* <ExpenseItem
       ></ExpenseItem>
       <ExpenseItem
       title={expenses[3].title}
       amount={expenses[3].amount}
       date={expenses[3].date}
-      ></ExpenseItem>
+      ></ExpenseItem> */}
     </Card>
   );
 }
