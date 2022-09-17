@@ -1,6 +1,8 @@
-import "./App.css";
-import Card from "./components/Card";
-import ExpenseItem from "./components/ExpenseItem";
+import React from "react";
+// import "./App.css";
+// import Card from "./components/UI/Card";
+// import ExpenseItem from "./components/Expenses/ExpenseItem";
+import Expenses from "./components/Expenses/Expense";
 
 const App = () => {
   const expenses = [
@@ -25,21 +27,10 @@ const App = () => {
     },
   ];
   return (
-    <Card>
-      <h2>Hello! Mr. Aishwary</h2>
-      <div>{expenses.map((obj) => {
-        return <ExpenseItem title={obj.title} amount={obj.amount} date={obj.date} />
-      })}
-      </div>
-      {/* <ExpenseItem
-      ></ExpenseItem>
-      <ExpenseItem
-      title={expenses[3].title}
-      amount={expenses[3].amount}
-      date={expenses[3].date}
-      ></ExpenseItem> */}
-    </Card>
-  );
+    <div>
+      <h2> Hello Mr. Aishwary Nigam</h2>
+      <Expenses item={expenses} />
+    </div>
+  )
 }
-
 export default App;
