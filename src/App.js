@@ -3,7 +3,7 @@ import React from "react";
 // import Card from "./components/UI/Card";
 // import ExpenseItem from "./components/Expenses/ExpenseItem";
 import Expenses from "./components/Expenses/Expense";
-
+import NewExpense from "./components/NewExpenses/NewExpense";
 const App = () => {
   const expenses = [
     {
@@ -28,7 +28,7 @@ const App = () => {
   ];
   return (
     <div>
-      <h2> Hello Mr. Aishwary Nigam</h2>
+      <NewExpense />
       <Expenses item={expenses} />
     </div>
   )
